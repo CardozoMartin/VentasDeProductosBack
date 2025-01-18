@@ -1,0 +1,22 @@
+{
+  "name": "ventasdeproductos",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file=.env --watch src/index.js",
+    "build": "esbuild src/index.js --bundle --platform=node --outfile=dist/index.cjs --minify",
+    "start": "node --env-file=.env dist/index.cjs",
+    "lint": "prettier . -w && eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.3"
+  }
+}
